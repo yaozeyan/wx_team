@@ -1,0 +1,130 @@
+<!--index.wxml  https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/-->
+<view class="container {{iphonex}}" style='height:{{height}}'>
+  <view class="shadow1" wx:if="{{!hasUserInfo && canIUse}}">
+    <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+  </view>
+  <view class='bg1'>
+    <block>
+      <view class='play au' bindtap='audioFlage' wx:if="{{audio}}"></view>
+      <view class='pushed au' bindtap='audioFlage' wx:else></view>
+    </block>
+  <view class="l1">
+
+    <view wx:if="{{ fontIndex != null }}" class='{{fontIndexClass }} s{{fontIndex }}'>
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+
+    <image style="left: {{ imgIndex }}" src='https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/123.png' bindload="img"></image>
+  </view>
+  <view class='y'>
+    <image wx:if="{{count==0 }}" src='https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/y1.png'></image>
+    <image wx:if="{{count>0 }}" src='https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/y{{count}}.png'></image>
+  </view>
+  <!-- 定位盒子 -->
+  <view class='pos'>
+    <!-- 主态首页 -->
+    <view  class='model1' wx:if = "{{page == 'model1'}}">
+        <!-- 队伍人数 -->
+      <view class='team-count' wx:if ="{{count==0 || count==1}}" >呼唤当年好友一起赏月：<text class='f-r'><text>{{count}}</text>/6</text></view>
+      <view class='team-count' wx:if = "{{count>1 }}"><text class='f-r'>{{count}}</text>位好友同赏月，点击头像有惊喜</view>
+
+      <!-- 人物头像盒子 -->
+      <view class='avatar-box'>
+        <view class='avatar'>
+           <view wx:key="this" wx:for="{{teamlist}}" wx:for-index="index" wx:for-item="item" class='avatar-bac'>
+            <image wx:if="{{fontIndex == (index+1) }}" class="headPhoto" bindtap='changeFontIndex' data-index='{{index }}' data-src="{{item.pic}}" src="{{item.pic}}" mode="cover"></image>
+            <image wx:if="{{fontIndex != (index+1) }}" bindtap='changeFontIndex' data-index='{{index }}' data-src="{{item.pic}}" src="{{item.pic}}" mode="cover"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 按钮盒子 -->
+      <view class='btn-box'>
+      <form bindsubmit="submit" data-type="dialog" report-submit='true' >
+        <button class='z-share' form-type="submit"></button>
+      </form>
+      <form bindsubmit="submit" data-type="share" report-submit='true' >
+        <button class='z-invite' open-type='share' form-type="submit"></button>
+      </form>
+        <!-- <button class='z-invite' bindtap='audioFlage'></button> -->
+      </view>
+      <!-- 称号 -->
+      <view class='user-title'>万流城已聚集<text class='f-r'>{{num}}</text>支队伍，已获得绝版称号“天外飞仙”</view>
+      <!-- 规则按钮 -->
+      <view class='rule-btn' bindtap='ruleOpen'><image src='../image/rule.png'></image></view>
+    </view>
+    <!-- 主态首页结束 -->
+    <!-- 主态组队成功 -->
+    <view class='model2' wx:if = "{{page == 'model2'}}">
+       <!-- <view class='team-count'><text class='f-r'>{{userInfo.nickName}}</text>成功赏月</view> -->
+       <view class='team-count'>月圆重逢时，点击头像有惊喜</view>       
+      <!-- 人物头像盒子 -->
+      <view class='avatar-box'>
+        <view class='teamSuccess' wx:if = "{{true}}">
+          <image src='../image/team-success.png'></image>
+        </view>
+        <view class='avatar'>
+          <view  wx:key="this" wx:for="{{teamlist}}" wx:for-index="index" wx:for-item="item" class='avatar-bac'>
+            <image wx:if="{{fontIndex == (index+1) }}" class="headPhoto" bindtap='changeFontIndex' data-index='{{index }}' data-src="{{item.pic}}" src="{{item.pic}}" mode="cover"></image>
+            <image wx:if="{{fontIndex != (index+1) }}" bindtap='changeFontIndex' data-index='{{index }}' data-src="{{item.pic}}" src="{{item.pic}}" mode="cover"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 按钮盒子 -->
+      <view class='btn-box2'>
+        <view class='z-share2'>
+          <image src='../image/goTeam-btn.png' wx:if = "{{man}}"></image>
+          <image src='../image/z-share.png' wx:else  bindtap='dialog'></image>
+        </view>
+      </view>
+      <!-- 称号 -->
+      <view class='user-title'>万流城已聚集<text class='f-r'>{{num}}</text>队伍，已获得绝版称号“天外飞仙”</view>
+    </view>
+    <!-- 主态组队成功结束 -->
+    <!-- 客态首页 -->
+    <view class='model3' wx:if = "{{page == 'model3'}}">
+       <view class='team-count'>
+        <view class='f-w nick'><text class='f-r'>{{nickName}}</text>邀请你一起赏月</view>
+       </view>
+      <!-- 人物头像盒子 -->
+      <view class='avatar-box'>
+        <view class='teamOver' wx:if = "{{man}}">
+          <image src='../image/team-over.png'></image>
+        </view>
+        <view class='avatar'>
+        <view wx:key="this" wx:for="{{teamlist}}" wx:for-index="index" wx:for-item="item" class='avatar-bac'>
+           <image wx:if="{{fontIndex == (index+1) }}" class="headPhoto" bindtap='changeFontIndex' data-index='{{index }}' data-src="{{item.pic}}" src="{{item.pic}}" mode="cover"></image>
+           <image wx:if="{{fontIndex != (index+1) }}" bindtap='changeFontIndex' data-index='{{index }}' data-src="{{item.pic}}" src="{{item.pic}}" mode="cover"></image>
+        </view>
+         
+        </view>
+      </view>
+      <!-- 按钮盒子 -->
+      <view class='btn-box2'>
+        <view class='z-share2'>
+          <image src='../image/goTeam-btn.png' wx:if = "{{man}}" bindtap='creatTeam'></image>
+          <form bindsubmit="submit" data-type="ok" report-submit='true' wx:else >
+            <button class='ok-btn' form-type="submit"></button>
+          </form>
+        </view>
+      </view>
+      <!-- 称号 -->
+      <view class='user-title'>万流城已聚集<text class='f-r'>{{num}}</text>队伍，已获得绝版称号“天外飞仙”</view>
+      <!-- 规则按钮 -->
+      <view class='rule-btn'><image src='../image/rule.png' bindtap='ruleOpen'></image><image class='creat-team' src='../image/creatTeam-btn.png'  wx:if = "{{kon}}" bindtap='creatTeam'></image></view>
+    </view>
+    <!-- 客态首页结束 -->
+    </view>
+  </view>
+  <!-- 规则弹窗 -->
+  <view class='shadow' wx:if = "{{ruleClose}}">
+    <image src='../image/rule-box.png' class='rule-box'><view class='rule-close' bindtap='ruleClose'></view></image>
+  </view>
+<!-- 活动结束弹窗 -->
+  <view class='shadow' wx:if = "{{end}}">
+    <image src='https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/end.png' class='rule-box'><view class='rule-close' bindtap='ruleClose'></view></image>
+  </view>
+  <canvas canvas-id="share" class='canvasA'></canvas>
+</view>

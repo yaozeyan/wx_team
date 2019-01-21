@@ -1,0 +1,326 @@
+/**index.wxss**/
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  background: rgba(0,0,0,.8);
+  z-index: 999;
+}
+.shadow1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  background: rgba(0,0,0,0);
+  z-index: 999;
+}
+.shadow1 button {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  z-index: 999;
+}
+.bg1 {
+  width: 750rpx;
+  height: 1470rpx;
+  background: url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/1.jpg) no-repeat;
+  background-size:750rpx;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; 
+}
+.l1 {
+  width: 750rpx;
+  height: 1470rpx;
+  position: relative;
+  z-index: 8;
+  overflow: hidden;
+}
+.l1 image {
+  width:9000rpx;
+  height: 1470rpx;
+  position: absolute;
+  top: 0rpx;
+}
+.y {
+  width: 503rpx;
+  height: 534rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx
+}
+.y image {
+  width: 503rpx;
+  height: 534rpx;
+}
+.pos {
+  width: 750rpx;
+  height: 370rpx;
+  background: url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/pos.jpg) no-repeat;
+  background-size:750rpx;
+  position: fixed;
+  left: 0rpx;
+  bottom: 0rpx;
+  z-index: 9; 
+}
+.team-count {
+  width: 100%;
+  height: 30rpx;
+  margin-top: 15rpx;
+  text-align: center;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  color: #9eacc7;
+}
+.f-r {
+  color: #d59882;
+}
+.f-w {
+  color: #fff;
+}
+.user-nick {
+  width: 150rpx;
+  height: 30rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+/* .nick {
+  width: 232rpx;
+  height: 30rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  left: 195rpx;
+} */
+.nick-txt {
+  color: #fff;
+  position: absolute;
+  right: -87rpx;
+  top:0rpx;
+  }
+.btn-box {
+  width: 703rpx;
+  height: 102rpx;
+  margin: 0rpx auto 0rpx;
+}
+.z-share {
+  width: 339rpx;
+  height: 102rpx;
+  float: left;
+  background: url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/z-share.png) no-repeat;
+  background-size:339rpx 102rpx;
+}
+.z-invite {
+  width: 339rpx;
+  height: 102rpx;
+  float: right;
+  background: url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/z-invite.png) no-repeat;
+  background-size:339rpx 102rpx; 
+}
+.z-share image{
+  width: 339rpx;
+  height: 102rpx;
+}
+.z-invite image{
+  width: 339rpx;
+  height: 102rpx;
+}
+.avatar-box {
+  width: 703rpx;
+  height: 92rpx;
+  /* background: red; */
+  /* opacity: .5; */
+  margin: 20rpx auto 0rpx;
+  position: relative;
+}
+.avatar {
+   width: 692rpx;
+   height: 92rpx;
+   display: flex;
+   justify-content: space-around;
+   
+}
+.avatar-img {
+   width: 70rpx;
+   height: 70rpx;
+}
+.avatar-bac {
+  width: 113rpx;
+  height: 92rpx;
+  background: url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/av-bac.png);
+  background-size:113rpx 92rpx; 
+}
+.teamSuccess {
+  width: 122rpx;
+  height: 71rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.teamSuccess image {
+  width: 122rpx;
+  height: 71rpx;
+}
+.avatar-bac image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 12rpx;
+  margin-left: 22rpx;
+  border-radius: 50%;
+}
+/*.userinfo-avatar {
+  
+}*/
+.user-title {
+  width: 100%;
+  height: 30rpx;
+  font-size: 27rpx;
+  line-height: 30rpx;
+  text-align: center;
+  color: #f2f3f6;
+  margin-top: 18rpx;
+}
+.rule-btn {
+  width: 112rpx;
+  height: 31rpx;
+  margin: 19rpx auto 0rpx;
+  position: relative;
+}
+.rule-btn image {
+  width: 112rpx;
+  height: 31rpx;
+ }
+ .rule-box {
+   width: 656rpx;
+   height: 405rpx;
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+  margin: auto;
+ }
+ .rule-close {
+   width: 70rpx;
+   height: 70rpx;
+   position: absolute;
+   right: 0rpx;
+   top: 0rpx;
+ }
+ .btn-box2 {
+   width: 100%;
+   height: 102rpx; 
+ }
+ .z-share2 {
+   width: 339rpx;
+   height: 102rpx;
+   margin: 0rpx auto 0rpx;
+ }
+ .ok-btn {
+   width: 339rpx;
+   height: 102rpx;
+   background: url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/ok-btn.png) no-repeat;
+   background-size:339rpx 102rpx; 
+ }
+ .z-share2 image{
+   width: 339rpx;
+   height: 102rpx;
+ }
+ .creat-team {
+   width:112rpx;
+   height:31rpx;
+   position: absolute;
+   right: -250rpx;
+   top: 8rpx;
+ }
+ .teamOver {
+  width: 171rpx;
+  height: 86rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+ .teamOver image {
+  width: 171rpx;
+  height: 86rpx;
+}
+.canvasA {width: 750rpx;height: 1125rpx;position: fixed;top: -40000rpx;left: 0rpx;z-index: 9999999}
+.au {width: 31rpx;height: 31rpx;position: absolute;left: 50rpx;top: 140rpx;z-index: 99999}
+.play {width: 62rpx;height: 62rpx;background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/play.png);background-size:62rpx 62rpx;animation: rot 2s linear infinite}
+@keyframes rot {
+  from{transform: rotate(0deg)}
+  to{transform: rotate(360deg)}
+}
+.pushed {width: 62rpx;height: 62rpx;background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/pushed.png);background-size:62rpx 62rpx;}
+
+.s {width:136rpx;height: 164rpx;right: 100rpx;top: 365rpx;position: absolute;}
+
+.s view{width:30rpx;height: 164rpx;display: block;float: left;margin-left: 4rpx;}
+
+.s1 view{background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/s1.png) no-repeat;background-size:129rpx 164rpx;}
+.s2 view{background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/s2.png) no-repeat;background-size:129rpx 164rpx;}
+.s3 view{background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/s3.png) no-repeat;background-size:129rpx 164rpx;}
+.s4 view{background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/s4.png) no-repeat;background-size:129rpx 164rpx;}
+.s5 view{background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/s5.png) no-repeat;background-size:129rpx 164rpx;}
+.s6 view{background:url(https://game.gtimg.cn/images/wmsj/cp/a20180918wmsjsy/s6.png) no-repeat;background-size:129rpx 164rpx;}
+
+.s view:nth-child(1){background-position: -102rpx 0rpx;animation: fontAm4 5s linear;}
+.s view:nth-child(2){background-position: -69rpx 0rpx;animation: fontAm3 5s linear;}
+.s view:nth-child(3){background-position: -35rpx 0rpx;animation: fontAm2 5s linear;}
+.s view:nth-child(4){background-position: -2rpx 0rpx;animation: fontAm1 5s linear;}
+
+
+
+@keyframes fontAm1
+{
+	0% {opacity: 0;}
+	25% {opacity: 1;}
+	50% {opacity: 1;}
+	75% {opacity: 1;}
+  100%{opacity: 1;}
+}
+@keyframes fontAm2
+{
+	0% {opacity: 0;}
+	25% {opacity: 0;}
+	50% {opacity: 1;}
+	75% {opacity: 1;}
+  100%{opacity: 1;}
+}
+@keyframes fontAm3
+{
+	0% {opacity: 0;}
+	25% {opacity: 0;}
+	50% {opacity: 0;}
+	75% {opacity: 1;}
+  100%{opacity: 1;}
+}
+@keyframes fontAm4
+{
+	0% {opacity: 0;}
+	25% {opacity: 0;}
+	50% {opacity: 0;}
+	75% {opacity: 0;}
+  100%{opacity: 1;}
+}
+.headPhoto{
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0rpx 0rpx 100rpx #fffb82;
+}
+.iphonex .pos{height: 580rpx;}

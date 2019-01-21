@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "完美世界，月圆重逢",
+    "navigationBarTextStyle":"black",
+    "disableScroll": true
+  }
+}
